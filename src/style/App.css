@@ -1,4 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Open+Sans:wght@300;500&display=swap");
+html, body, #root {
+  height: 100%; }
+
 body {
-  background: #E5E5E5; }
+  background: #000000;
+  color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  overflow: hidden; }
+  @media (max-width: 1024px) {
+    body {
+      overflow: scroll; } }
+  body a {
+    color: #FFFFFF; }
+  body h1 {
+    color: #FCA311;
+    font-family: 'Montserrat', sans-serif; }
+  body .button {
+    background: #E5E5E5;
+    color: #000000;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px; }
+  body .buttonActive {
+    background: #FCA311; }
+  body textarea {
+    background: #E5E5E5;
+    border: 1px solid #FFFFFF;
+    min-height: 300px;
+    resize: none;
+    width: 100%; }
+  body input {
+    border: none;
+    box-sizing: border-box;
+    height: 45px;
+    font-size: 20px;
+    width: 300px;
+    padding: 5px 10px; }
+  body .filteredCountriesWrapper > div {
+    background: #E5E5E5;
+    border-radius: 3px;
+    color: #000000;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px; }
+    body .filteredCountriesWrapper > div img {
+      cursor: pointer;
+      height: 12px;
+      margin-right: 5px; }
+  body .searchResultsWrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 300px;
+    z-index: 1; }
+    body .searchResultsWrapper .searchResults {
+      background: #E5E5E5;
+      color: black;
+      left: 0;
+      margin: auto;
+      max-height: 400px;
+      overflow-y: scroll;
+      position: absolute;
+      width: 300px; }
+      body .searchResultsWrapper .searchResults > div {
+        box-sizing: border-box;
+        border-bottom: 1px solid #000000;
+        cursor: pointer;
+        padding: 10px 0px; }
+      body .searchResultsWrapper .searchResults > div:hover {
+        background: #FCA311; }
+  body .colWrapper {
+    height: 100%; }
+    @media (max-width: 1024px) {
+      body .colWrapper {
+        height: initial;
+        width: 100%; } }
+    body .colWrapper .mainCol {
+      display: inline-block;
+      box-sizing: border-box;
+      height: 100%;
+      position: relative;
+      padding: 25px;
+      vertical-align: top; }
+      body .colWrapper .mainCol .buttonWrapper {
+        display: block; }
+        body .colWrapper .mainCol .buttonWrapper > div {
+          display: inline-block; }
+    body .colWrapper .leftCol {
+      text-align: center;
+      width: 34%; }
+      @media (max-width: 1024px) {
+        body .colWrapper .leftCol {
+          height: 300px;
+          width: 100%; } }
+      body .colWrapper .leftCol .contact {
+        bottom: 35px;
+        left: 0;
+        position: absolute;
+        width: 100%; }
+    body .colWrapper .rightCol {
+      background: #14213D;
+      width: 66%; }
+      @media (max-width: 1024px) {
+        body .colWrapper .rightCol {
+          width: 100%; } }
 
 /*# sourceMappingURL=App.css.map */

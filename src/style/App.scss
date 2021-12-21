@@ -4,6 +4,161 @@ $orange: #FCA311;
 $gray: #E5E5E5;
 $white: #FFFFFF;
 
+$mobileBreakpoint: 1024px;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Open+Sans:wght@300;500&display=swap');
+
+html, body, #root {
+    height: 100%;
+}
+
 body {
-    background: $white;
+    background: $black;
+    color: $white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;    
+    overflow: hidden;
+
+    @media (max-width: $mobileBreakpoint) {
+        overflow: scroll;
+    }
+
+    a {
+        color: $white;
+    }
+
+    h1 {
+        color: $orange;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .button {
+        background: $gray;
+        color: $black;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 10px 15px;
+    }
+
+    .buttonActive {
+        background: $orange;
+    }
+
+    textarea {
+        background: $gray;
+        border: 1px solid $white;
+        min-height: 300px;
+        resize: none;
+        width: 100%;
+    }
+
+    input {
+        border: none;
+        box-sizing: border-box;
+        height: 45px;
+        font-size: 20px;
+        width: 300px;
+        padding: 5px 10px;
+    }
+
+    .filteredCountriesWrapper {
+        > div {
+            background: $gray;
+            border-radius: 3px;
+            color: $black;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+
+            img {
+                cursor: pointer;
+                height: 12px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .searchResultsWrapper {
+        margin: 0 auto;
+        position: relative;
+        width: 300px;
+        z-index: 1;        
+        
+        .searchResults {
+            background: $gray;
+            color: black;
+            left: 0;
+            margin: auto;
+            max-height: 400px;
+            overflow-y: scroll;
+            position: absolute;
+            width: 300px;
+    
+            > div {
+                box-sizing: border-box;
+                border-bottom: 1px solid $black;
+                cursor: pointer;
+                padding: 10px 0px;            
+            }
+    
+            > div:hover {
+                background: $orange;
+            }
+        }
+    }
+    
+
+    .colWrapper {
+        height: 100%;
+
+        @media (max-width: $mobileBreakpoint) {
+            height: initial;
+            width: 100%;
+        }
+
+        .mainCol {
+            display: inline-block;
+            box-sizing: border-box;
+            height: 100%;
+            position: relative;
+            padding: 25px;
+            vertical-align: top;
+                        
+
+            .buttonWrapper {
+                display: block;
+                > div {
+                    display: inline-block;
+                }
+            }
+        }
+    
+        .leftCol {
+            text-align: center;
+            width: 34%;
+
+            @media (max-width: $mobileBreakpoint) {
+                height: 300px;
+                width: 100%;
+            }
+
+            .contact {
+                bottom: 35px;
+                left: 0;
+                position: absolute;                
+                width: 100%;                
+            }
+        }
+
+        .rightCol {
+            background: $blue;
+            width: 66%;         
+            
+            @media (max-width: $mobileBreakpoint) {
+                width: 100%;
+            }
+        }
+    }    
 }
